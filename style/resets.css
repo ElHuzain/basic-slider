@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+    font-family: 'dubai-medium', arial;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #F0F0F0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+input, input::selection, input:focus {
+    outline: none;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+    color: unset;
+    font-style: none;
+}

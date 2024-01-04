@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/variables.css">
+    <link rel="stylesheet" type="text/css" href="./style/resets.css">
+    <link rel="stylesheet" type="text/css" href="./style/global.css">
+    <title>5D Task</title>
+</head>
+
+<body>
+    <main id="draggable" class="container">
+
+        <!-- Banner & Image -->
+        <div class="banner_header">
+
+            <!-- Banner text -->
+            <div class="banner_container">
+                <div>
+                    <h1 id="header-text" class="fade-animation"></h1>
+                    <p id="sub-header" class="fade-animation"></p>
+                </div>
+                <button id="call-to-action">CTA Button 1</button>
+            </div>
+
+            <!-- Image preview -->
+            <div class="image_container">
+                <img id="image-display" class="image" src="./assets/image-1.jpeg" />
+            </div>
+
+        </div>
+
+
+        <!-- Controllers / Articles -->
+        <div class="hero_controls">
+
+            <!-- Image controller -->
+            <div class="image_navigation">
+                <button onClick="swipeLeft()"><i class="fa-solid fa-chevron-left swipe-button"></i></button>
+                <i id="pause-play" onClick="pausePlay()" class="fa-solid fa-pause"></i>
+                <a onClick="setSwipe(0)" href="#img-1">
+                    <div class="point"></div>
+                </a>
+                <a onClick="setSwipe(1)" href="#img-2">
+                    <div class="point"></div>
+                </a>
+                <a onClick="setSwipe(2)" href="#img-3">
+                    <div class="point"></div>
+                </a>
+                <button onClick="swipeRight()"><i class="fa-solid fa-chevron-right swipe-button"></i></button>
+            </div>
+            <div id="filler-container"> 
+                <div id="filler"></div>
+            </div>
+
+            <!-- Search input -->
+            <input placeholder="How can we help you?" />
+
+            <!-- Articles -->
+            <div class="article-container">
+                <article class="article">
+                    <i class="fa-solid fa-star fa-2x"></i>
+                    <h1>Facere evenient quae</h1>
+                    <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
+                </article>
+                <article class="article">
+                    <i class="fa-solid fa-star fa-2x"></i>
+                    <h1>Facere evenient quae</h1>
+                    <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
+                </article>
+                <article class="article">
+                    <i class="fa-solid fa-star fa-2x"></i>
+                    <h1>Facere evenient quae</h1>
+                    <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
+                </article>
+                <article class="article">
+                    <i class="fa-solid fa-star fa-2x"></i>
+                    <h1>Facere evenient quae</h1>
+                    <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
+                </article>
+                <article class="article">
+                    <i class="fa-solid fa-star fa-2x"></i>
+                    <h1>Facere evenient quae</h1>
+                    <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
+                </article>
+            </div>
+        </div>
+
+    </main>
+    <script src="https://kit.fontawesome.com/05f650b620.js" crossorigin="anonymous"></script>
+    <script src="javascript/slider.js"></script>
+</body>
+
+</html>

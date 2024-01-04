@@ -1,0 +1,18 @@
+:root {
+    /* Fonts */
+
+
+    /* Colors */
+
+
+    /* Spacing / Width / Height */
+    --max-width: 1296px
+}
+
+@font-face {
+    font-family: 'dubai-medium';
+    src: url('../assets/Dubai-Medium.ttf') format('woff2');
+
+    font-weight: normal;
+    font-style: normal;
+}
