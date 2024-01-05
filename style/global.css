@@ -9,6 +9,22 @@
     overflow: hidden;
 }
 
+.button-color-active {
+    color: black;
+}
+
+.butotn-color-inactive {
+    color: white;
+}
+
+.point-color-active {
+    background-color: black;
+}
+
+.point-color-inactive {
+    background-color: gray;
+}
+
 .banner_header {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -106,7 +122,6 @@
 .point {
     width: 7px;
     height: 7px;
-    background-color: rgb(255, 255, 255);
     border-radius: 50%;
 }
 
@@ -264,7 +279,7 @@
     }
 
     .banner_container {
-        height: 170px;
+        height: 150px;
         justify-content: start;
     }
 
@@ -277,7 +292,7 @@
     }
 
     .image_navigation {
-        background-color: rgba(121, 149, 226, 0.404);
+        background-color: rgba(56, 56, 56, 0.404);
         padding: 1rem;
         border-radius: 7px;
         position: absolute;
@@ -290,6 +305,26 @@
         margin-right: auto;
         align-items: center;
         gap: 0.8rem;
+    }
+
+    .button-color-active {
+        color: rgb(146, 146, 146);
+    }
+    
+    .butotn-color-inactive {
+        color: rgb(185, 185, 185);
+    }
+    
+    .point-color-active {
+        background-color: white;
+    }
+    
+    .point-color-inactive {
+        background-color: rgb(143, 143, 143);
+    }
+
+    #pause-play {
+        color: rgb(187, 187, 187);
     }
 
 }

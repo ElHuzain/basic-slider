@@ -89,21 +89,26 @@ const update = () => {
         ]);
 
     for (let i = 0; i < listOfPoints.length; i++) {
-        if (i === currentData) listOfPoints[i].style.setProperty('background-color', 'black');
-        else listOfPoints[i].style.setProperty('background-color', 'gray');
+        console.log(listOfPoints[i])
+        if (i === currentData) changeColor(listOfPoints[i], 'point-color-inactive', 'point-color-active');
+        else changeColor(listOfPoints[i], 'point-color-active', 'point-color-inactive')
     }
-
 
     // Fade out buttons that are locked due to swipping limit
-    swipeButtons[0].style.setProperty('color', 'black');
-    swipeButtons[1].style.setProperty('color', 'black');
+    changeColor(swipeButtons[0], 'button-color-inactive', 'button-color-active')
+    changeColor(swipeButtons[1], 'button-color-inactive', 'button-color-active')
 
     if (currentData === 0) {
-        swipeButtons[0].style.setProperty('color', 'gray');
+        changeColor(swipeButtons[0], 'button-color-active', 'button-color-inactive')
     } else if (currentData === data.length - 1) {
-        swipeButtons[1].style.setProperty('color', 'gray');
+        changeColor(swipeButtons[1], 'button-color-active', 'button-color-inactive')
     }
 
+}
+
+const changeColor = (element, prevClass, newClass) => {
+    element.classList.remove(prevClass);
+    element.classList.add(newClass);
 }
 
 const resetAnimation = (elements) => {
