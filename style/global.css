@@ -148,7 +148,8 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    gap: 8px;   
+    width: 300px !important;
+    gap: 8px;
     height: fit-content !important;
     border-radius: 10px;
     transition: transform .3s;
@@ -204,6 +205,14 @@
 /* Responsiveness */
 
 @media only screen AND (max-width: 800px) {
+
+    .swiper {
+        width: unset;
+    }
+
+    .hero_controls input {
+        max-width: 100%;
+    }
 
     .container {
         padding: 0;
