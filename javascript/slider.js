@@ -167,12 +167,21 @@ const pausePlay = () => {
     pause = !pause;
 }
 
-lottieAnimation.addEventListener('complete', () => {
-    if (currentData === data.length - 1) setSwipe(0);
-    else swipeRight()
-    fillerWidth = 0;
-    lottieAnimation.seek(0);
-    lottieAnimation.play();
-})
+// I previously used the "complete" listener to reload the animation, but I realized I can just do it in the frame listener since I'll be using it anyways
+// This listener is implemented to slow down the animation at the end (because the first half is slow, second half is very fast)
+lottieAnimation.addEventListener('frame', (e) => {
+    const currentFrame = e.detail.frame;
+    if (currentFrame > 60) {
+        if (currentData === data.length - 1) setSwipe(0);
+        else swipeRight()
+        fillerWidth = 0;
+        lottieAnimation.seek(0);
+        lottieAnimation.play();
+    }
+    else if (currentFrame > 50) {
+        lottieAnimation.setSpeed(0.3);
+    }
+    else lottieAnimation.setSpeed(0.8);
+});
 
 init();
