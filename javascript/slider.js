@@ -11,7 +11,7 @@ const data = [
         id: 1,
         title: 'Noqodi Payment Support',
         subtitle: 'For Noqodi Support, please complete the form available at the link below.',
-        cta: 'Application Form',
+        cta: `Application Form`,
         img: './assets/image-2.jpg'
     },
     {
@@ -22,6 +22,9 @@ const data = [
         img: './assets/image-3.jpg'
     },
 ]
+
+let screenWidth = window.innerWidth;
+window.addEventListener('resize', (e) => console.log(e.target.innerWidth))
 
 let currentData = 0;
 let direction = true; // True = right. False = left
@@ -42,8 +45,8 @@ const swipeButtons = document.getElementsByClassName('swipe-button');
 // Pause / play button
 const PauseBtn = document.getElementById('pause-play');
 
-// Auto swipe indicator
-const Filler = document.getElementById('filler');
+// Lottie animation
+const lottieAnimation = document.getElementById('lottie-animatino');
 
 const init = () => {
     update();
@@ -87,21 +90,26 @@ const update = () => {
         ]);
 
     for (let i = 0; i < listOfPoints.length; i++) {
-        if (i === currentData) listOfPoints[i].style.setProperty('background-color', 'black');
-        else listOfPoints[i].style.setProperty('background-color', 'gray');
+        console.log(listOfPoints[i])
+        if (i === currentData) changeColor(listOfPoints[i], 'point-color-inactive', 'point-color-active');
+        else changeColor(listOfPoints[i], 'point-color-active', 'point-color-inactive')
     }
-
 
     // Fade out buttons that are locked due to swipping limit
-    swipeButtons[0].style.setProperty('color', 'black');
-    swipeButtons[1].style.setProperty('color', 'black');
+    changeColor(swipeButtons[0], 'button-color-inactive', 'button-color-active')
+    changeColor(swipeButtons[1], 'button-color-inactive', 'button-color-active')
 
     if (currentData === 0) {
-        swipeButtons[0].style.setProperty('color', 'gray');
+        changeColor(swipeButtons[0], 'button-color-active', 'button-color-inactive')
     } else if (currentData === data.length - 1) {
-        swipeButtons[1].style.setProperty('color', 'gray');
+        changeColor(swipeButtons[1], 'button-color-active', 'button-color-inactive')
     }
 
+}
+
+const changeColor = (element, prevClass, newClass) => {
+    element.classList.remove(prevClass);
+    element.classList.add(newClass);
 }
 
 const resetAnimation = (elements) => {
@@ -140,7 +148,7 @@ draggable.addEventListener('touchstart', (e) => {
 })
 
 draggable.addEventListener('touchmove', (e) => {
-    if(!dragging) return;
+    if (!dragging) return;
     if (mouseX < e.touches[0].screenX - 50) {
         swipeLeft()
         dragging = false;
@@ -158,29 +166,30 @@ const pausePlay = () => {
     if (pause) {
         PauseBtn.classList.add('fa-pause');
         PauseBtn.classList.remove('fa-play');
-        startInterval();
+        lottieAnimation.play();
     } else {
         PauseBtn.classList.remove('fa-pause');
         PauseBtn.classList.add('fa-play');
-        stopInterval();
+        lottieAnimation.pause();
     }
     pause = !pause;
 }
 
-let fillerWidth = 0;
-
-const intervalFunction = () => {
-    Filler.style.setProperty('width', `${fillerWidth = fillerWidth + 2}%`)
-    if (fillerWidth >= 100) {
+// I previously used the "complete" listener to reload the animation, but I realized I can just do it in the frame listener since I'll be using it anyways
+// This listener is implemented to slow down the animation at the end (because the first half is slow, second half is very fast)
+lottieAnimation.addEventListener('frame', (e) => {
+    const currentFrame = e.detail.frame;
+    if (currentFrame > 60) {
         if (currentData === data.length - 1) setSwipe(0);
         else swipeRight()
         fillerWidth = 0;
+        lottieAnimation.seek(0);
+        lottieAnimation.play();
     }
-}
-
-let interval = setInterval(intervalFunction, 100);
-
-const startInterval = () => { interval = setInterval(intervalFunction, 100); }
-const stopInterval = () => { clearInterval(interval) };
+    else if (currentFrame > 50) {
+        lottieAnimation.setSpeed(0.3);
+    }
+    else lottieAnimation.setSpeed(0.8);
+});
 
 init();
