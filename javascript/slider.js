@@ -119,6 +119,9 @@ const resetAnimation = (elements) => {
 // Logic for swipipng right / left
 
 let mouseX = null, mouseY = null;
+let dragging = false;
+
+// Laptop swipe handling
 
 draggable.addEventListener('mousedown', (e) => {
     mouseX = e.clientX
@@ -127,6 +130,25 @@ draggable.addEventListener('mousedown', (e) => {
 draggable.addEventListener('mouseup', (e) => {
     if (mouseX < e.clientX - 50) swipeLeft()
     else if (mouseX > e.clientX + 50) swipeRight()
+})
+
+// Phone swipe handling
+
+draggable.addEventListener('touchstart', (e) => {
+    mouseX = e.touches[0].screenX
+    dragging = true;
+})
+
+draggable.addEventListener('touchmove', (e) => {
+    if(!dragging) return;
+    if (mouseX < e.touches[0].screenX - 50) {
+        swipeLeft()
+        dragging = false;
+    }
+    else if (mouseX > e.touches[0].screenX + 50) {
+        swipeRight()
+        dragging = false;
+    }
 })
 
 // Pause / play logic
@@ -150,7 +172,7 @@ let fillerWidth = 0;
 const intervalFunction = () => {
     Filler.style.setProperty('width', `${fillerWidth = fillerWidth + 2}%`)
     if (fillerWidth >= 100) {
-        if(currentData === data.length - 1) setSwipe(0);
+        if (currentData === data.length - 1) setSwipe(0);
         else swipeRight()
         fillerWidth = 0;
     }

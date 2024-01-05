@@ -42,6 +42,7 @@
 .image_container {
     display: flex;
     list-style-type: none;
+    width: 100%;
     height: 400px;
     margin-right: 16px;
 }
@@ -183,8 +184,17 @@
 
 @media only screen AND (max-width: 800px) {
 
+    .container {
+        padding: 0;
+    }
+
+    .image_container img {
+        border-radius: 0px;
+    }
+
     .banner_header {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .banner_container h1 {
@@ -199,6 +209,10 @@
     .image_container {
         margin-right: 0;
         height: 300px;
+    }
+
+    .hero_controls, .banner_container {
+        padding: 0 1rem;
     }
 
     .article {
