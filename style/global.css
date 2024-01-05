@@ -41,6 +41,8 @@
 
 .image_container {
     display: flex;
+    background-color: black;
+    border-radius: 7px;
     list-style-type: none;
     width: 100%;
     height: 400px;
@@ -213,6 +215,13 @@
 
     .hero_controls, .banner_container {
         padding: 0 1rem;
+    }
+
+    .banner_container {
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .article {
