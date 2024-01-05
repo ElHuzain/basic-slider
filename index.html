@@ -23,11 +23,10 @@
                     <h1 id="header-text" class="fade-animation"></h1>
                     <p id="sub-header" class="fade-animation"></p>
                 </div>
-                <button class="call-to-action desktop-cta">CTA Button 1</button>
-                <button class="mobile-cta">
-                    <a class="call-to-action"></a>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
+                <div class="cta-container">
+                    <button id="call-to-action" class="desktop-cta">CTA Button 1</button>
+                    <i class="fa-solid fa-arrow-right cta-arrow"></i>
+                </div>
             </div>
 
             <!-- Image preview -->
@@ -63,8 +62,7 @@
 
             <!-- Mouse scrolling -->
             <dotlottie-player src="https://lottie.host/5b2c7033-52ae-4c63-8156-253f71106754/K9wzJmcYrF.json"
-                background="transparent" speed="1" class="mouse-scroll" loop
-                autoplay></dotlottie-player>
+                background="transparent" speed="1" class="mouse-scroll" loop autoplay></dotlottie-player>
 
             <!-- Search input -->
             <input placeholder="How can we help you?" />

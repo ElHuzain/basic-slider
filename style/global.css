@@ -17,6 +17,11 @@
     color: white;
 }
 
+.cta-arrow {
+    opacity: 0;
+    transition: opacity .3s;
+}
+
 .point-color-active {
     background-color: black;
 }
@@ -53,10 +58,7 @@
     padding: 1rem 2rem;
     border: 0;
     background-color: white;
-}
-
-.mobile-cta {
-    display: none;
+    transition: background .6s;
 }
 
 .image_container {
@@ -279,7 +281,7 @@
     }
 
     .banner_container {
-        height: 150px;
+        max-height: 170px;
         justify-content: start;
     }
 
@@ -288,7 +290,20 @@
     }
 
     .desktop-cta {
-        display: none;
+        margin-top: 0 !important;
+        background-color: transparent !important;
+        padding: 0 !important;
+    }
+
+    .cta-arrow {
+        opacity: 1;
+    }
+
+    .cta-container {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: start;
     }
 
     .image_navigation {
@@ -299,26 +314,18 @@
         top: 180px;
     }
 
-    .mobile-cta {
-        display: flex;
-        margin-top: 1rem;
-        margin-right: auto;
-        align-items: center;
-        gap: 0.8rem;
-    }
-
     .button-color-active {
         color: rgb(146, 146, 146);
     }
-    
+
     .butotn-color-inactive {
         color: rgb(185, 185, 185);
     }
-    
+
     .point-color-active {
         background-color: white;
     }
-    
+
     .point-color-inactive {
         background-color: rgb(143, 143, 143);
     }

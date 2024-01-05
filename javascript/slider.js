@@ -11,7 +11,7 @@ const data = [
         id: 1,
         title: 'Noqodi Payment Support',
         subtitle: 'For Noqodi Support, please complete the form available at the link below.',
-        cta: 'Application Form',
+        cta: `Application Form`,
         img: './assets/image-2.jpg'
     },
     {
@@ -23,6 +23,9 @@ const data = [
     },
 ]
 
+let screenWidth = window.innerWidth;
+window.addEventListener('resize', (e) => console.log(e.target.innerWidth))
+
 let currentData = 0;
 let direction = true; // True = right. False = left
 
@@ -33,7 +36,7 @@ const draggable = document.getElementById('draggable');
 const imageDisplay = document.getElementById('image-display');
 const headerText = document.getElementById('header-text');
 const subHeaderText = document.getElementById('sub-header');
-const callToActionButton = document.getElementsByClassName('call-to-action');
+const callToActionButton = document.getElementById('call-to-action');
 const listOfPoints = document.getElementsByClassName('point');
 
 // Swiping buttons
@@ -76,15 +79,13 @@ const update = () => {
     imageDisplay.src = currentObject.img;
     headerText.innerHTML = currentObject.title;
     subHeaderText.innerHTML = currentObject.subtitle;
-    callToActionButton[0].innerHTML = currentObject.cta;
-    callToActionButton[1].innerHTML = currentObject.cta;
+    callToActionButton.innerHTML = currentObject.cta;
 
     resetAnimation(
         [
             { element: headerText, duration: .2 },
             { element: subHeaderText, duration: .3 },
-            { element: callToActionButton[0], duration: .4 },
-            { element: callToActionButton[1], duration: .4 },
+            { element: callToActionButton, duration: .4 },
             { element: imageDisplay, duration: .5 }
         ]);
 
