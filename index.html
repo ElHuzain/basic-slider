@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./style/variables.css">
     <link rel="stylesheet" type="text/css" href="./style/resets.css">
     <link rel="stylesheet" type="text/css" href="./style/global.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>5D Task</title>
 </head>
 
@@ -32,14 +33,18 @@
 
         </div>
 
-
         <!-- Controllers / Articles -->
         <div class="hero_controls">
 
             <!-- Image controller -->
             <div class="image_navigation">
                 <button onClick="swipeLeft()"><i class="fa-solid fa-chevron-left swipe-button"></i></button>
-                <i id="pause-play" onClick="pausePlay()" class="fa-solid fa-pause"></i>
+                <button onClick="pausePlay()" class="lottie-container">
+                    <i id="pause-play" class="fa-solid fa-pause pause-play-button"></i>
+                    <dotlottie-player id="lottie-animatino"
+                        src="https://lottie.host/9569a79f-0086-4e39-b56a-195f5810ef04/d27LJVNQEh.json"
+                        background="transparent" class="lottie-circle" speed="1" autoplay></dotlottie-player>
+                </button>
                 <button onClick="setSwipe(0)">
                     <div class="point"></div>
                 </button>
@@ -51,46 +56,65 @@
                 </button>
                 <button onClick="swipeRight()"><i class="fa-solid fa-chevron-right swipe-button"></i></button>
             </div>
-            <div id="filler-container"> 
-                <div id="filler"></div>
-            </div>
 
             <!-- Search input -->
             <input placeholder="How can we help you?" />
 
             <!-- Articles -->
-            <div class="article-container">
-                <article class="article">
-                    <i class="fa-solid fa-star fa-2x"></i>
-                    <h1>Facere evenient quae</h1>
-                    <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
-                </article>
-                <article class="article">
-                    <i class="fa-solid fa-star fa-2x"></i>
-                    <h1>Facere evenient quae</h1>
-                    <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
-                </article>
-                <article class="article">
-                    <i class="fa-solid fa-star fa-2x"></i>
-                    <h1>Facere evenient quae</h1>
-                    <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
-                </article>
-                <article class="article">
-                    <i class="fa-solid fa-star fa-2x"></i>
-                    <h1>Facere evenient quae</h1>
-                    <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
-                </article>
-                <article class="article">
-                    <i class="fa-solid fa-star fa-2x"></i>
-                    <h1>Facere evenient quae</h1>
-                    <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
-                </article>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <article class="swiper-slide">
+                        <i class="fa-solid fa-star fa-2x"></i>
+                        <h1>Facere evenient quae</h1>
+                        <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
+                    </article>
+                    <article class="swiper-slide">
+                        <i class="fa-solid fa-star fa-2x"></i>
+                        <h1>Facere evenient quae</h1>
+                        <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
+                    </article>
+                    <article class="swiper-slide">
+                        <i class="fa-solid fa-star fa-2x"></i>
+                        <h1>Facere evenient quae</h1>
+                        <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
+                    </article>
+                    <article class="swiper-slide">
+                        <i class="fa-solid fa-star fa-2x"></i>
+                        <h1>Facere evenient quae</h1>
+                        <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
+                    </article>
+                    <article class="swiper-slide">
+                        <i class="fa-solid fa-star fa-2x"></i>
+                        <h1>Facere evenient quae</h1>
+                        <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
+                    </article>
+                    <article class="swiper-slide">
+                        <i class="fa-solid fa-star fa-2x"></i>
+                        <h1>Facere evenient quae</h1>
+                        <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
+                    </article>
+                </div>
             </div>
         </div>
 
     </main>
+
+    <!-- Javascript Imports -->
     <script src="https://kit.fontawesome.com/05f650b620.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <script src="javascript/slider.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            spaceBetween: 8,
+        });
+    </script>
 </body>
 
 </html>

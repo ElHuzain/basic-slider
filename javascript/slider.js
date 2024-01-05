@@ -42,8 +42,8 @@ const swipeButtons = document.getElementsByClassName('swipe-button');
 // Pause / play button
 const PauseBtn = document.getElementById('pause-play');
 
-// Auto swipe indicator
-const Filler = document.getElementById('filler');
+// Lottie animation
+const lottieAnimation = document.getElementById('lottie-animatino');
 
 const init = () => {
     update();
@@ -140,7 +140,7 @@ draggable.addEventListener('touchstart', (e) => {
 })
 
 draggable.addEventListener('touchmove', (e) => {
-    if(!dragging) return;
+    if (!dragging) return;
     if (mouseX < e.touches[0].screenX - 50) {
         swipeLeft()
         dragging = false;
@@ -158,29 +158,21 @@ const pausePlay = () => {
     if (pause) {
         PauseBtn.classList.add('fa-pause');
         PauseBtn.classList.remove('fa-play');
-        startInterval();
+        lottieAnimation.play();
     } else {
         PauseBtn.classList.remove('fa-pause');
         PauseBtn.classList.add('fa-play');
-        stopInterval();
+        lottieAnimation.pause();
     }
     pause = !pause;
 }
 
-let fillerWidth = 0;
-
-const intervalFunction = () => {
-    Filler.style.setProperty('width', `${fillerWidth = fillerWidth + 2}%`)
-    if (fillerWidth >= 100) {
-        if (currentData === data.length - 1) setSwipe(0);
-        else swipeRight()
-        fillerWidth = 0;
-    }
-}
-
-let interval = setInterval(intervalFunction, 100);
-
-const startInterval = () => { interval = setInterval(intervalFunction, 100); }
-const stopInterval = () => { clearInterval(interval) };
+lottieAnimation.addEventListener('complete', () => {
+    if (currentData === data.length - 1) setSwipe(0);
+    else swipeRight()
+    fillerWidth = 0;
+    lottieAnimation.seek(0);
+    lottieAnimation.play();
+})
 
 init();
