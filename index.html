@@ -23,9 +23,12 @@
                     <h1 id="header-text" class="fade-animation"></h1>
                     <p id="sub-header" class="fade-animation"></p>
                 </div>
-                <button id="call-to-action">CTA Button 1</button>
+                <button class="call-to-action desktop-cta">CTA Button 1</button>
+                <button class="mobile-cta">
+                    <a class="call-to-action">WTF?</a>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
             </div>
-
             <!-- Image preview -->
             <div class="image_container">
                 <img id="image-display" class="image" src="./assets/image-1.jpeg" />
@@ -57,8 +60,16 @@
                 <button onClick="swipeRight()"><i class="fa-solid fa-chevron-right swipe-button"></i></button>
             </div>
 
+            <!-- Mouse scrolling -->
+            <dotlottie-player src="https://lottie.host/5b2c7033-52ae-4c63-8156-253f71106754/K9wzJmcYrF.json"
+                background="transparent" speed="1" class="mouse-scroll" loop
+                autoplay></dotlottie-player>
+
             <!-- Search input -->
             <input placeholder="How can we help you?" />
+
+            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                type="module"></script>
 
             <!-- Articles -->
             <div class="swiper mySwiper">

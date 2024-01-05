@@ -33,7 +33,7 @@ const draggable = document.getElementById('draggable');
 const imageDisplay = document.getElementById('image-display');
 const headerText = document.getElementById('header-text');
 const subHeaderText = document.getElementById('sub-header');
-const callToActionButton = document.getElementById('call-to-action');
+const callToActionButton = document.getElementsByClassName('call-to-action');
 const listOfPoints = document.getElementsByClassName('point');
 
 // Swiping buttons
@@ -76,13 +76,15 @@ const update = () => {
     imageDisplay.src = currentObject.img;
     headerText.innerHTML = currentObject.title;
     subHeaderText.innerHTML = currentObject.subtitle;
-    callToActionButton.innerHTML = currentObject.cta;
+    callToActionButton[0].innerHTML = currentObject.cta;
+    callToActionButton[1].innerHTML = currentObject.cta;
 
     resetAnimation(
         [
             { element: headerText, duration: .2 },
             { element: subHeaderText, duration: .3 },
-            { element: callToActionButton, duration: .4 },
+            { element: callToActionButton[0], duration: .4 },
+            { element: callToActionButton[1], duration: .4 },
             { element: imageDisplay, duration: .5 }
         ]);
 
