@@ -103,8 +103,8 @@
 
 .lottie-container {
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     /* border: 1px solid red; */
     display: flex;
 }
@@ -120,8 +120,8 @@
 }
 
 .point {
-    width: 7px;
-    height: 7px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
 }
 
