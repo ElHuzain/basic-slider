@@ -13,8 +13,8 @@
     color: black;
 }
 
-.butotn-color-inactive {
-    color: white;
+.button-color-inactive {
+    color: rgb(119, 119, 119);
 }
 
 .cta-arrow {
@@ -307,7 +307,7 @@
     }
 
     .image_navigation {
-        background-color: rgba(56, 56, 56, 0.404);
+        background-color: rgba(235, 235, 235, 0.76);
         padding: 1rem;
         border-radius: 7px;
         position: absolute;
@@ -315,23 +315,23 @@
     }
 
     .button-color-active {
-        color: rgb(146, 146, 146);
+        color: rgb(0, 0, 0);
     }
 
-    .butotn-color-inactive {
-        color: rgb(185, 185, 185);
+    .button-color-inactive {
+        color: rgb(97, 97, 97);
     }
 
     .point-color-active {
-        background-color: white;
+        background-color: rgb(0, 0, 0);
     }
 
     .point-color-inactive {
-        background-color: rgb(143, 143, 143);
+        background-color: rgb(83, 83, 83);
     }
 
     #pause-play {
-        color: rgb(187, 187, 187);
+        color: rgb(73, 73, 73);
     }
 
 }
