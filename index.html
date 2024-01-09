@@ -71,10 +71,18 @@
             <!-- Swiper Controller -->
             <div class="col-12 p-0 controller mt-4">
                 <button class="swiper-button-prev swiper-button"></button>
-                <div>Don Eladio</div>
+
+                <button onClick="pausePlay()" class="lottie-container">
+                    <i id="pause-play" style="font-size: 24px;" class="fa-solid fa-pause pause-play-button"></i>
+                    <dotlottie-player id="lottie-animatino"
+                        src="https://lottie.host/9569a79f-0086-4e39-b56a-195f5810ef04/d27LJVNQEh.json"
+                        background="transparent" class="lottie-circle" speed="1" autoplay></dotlottie-player>
+                </button>
+
                 <div class="swiper-pagination"></div>
                 <button class="swiper-button-next swiper-button"></button>
             </div>
+
 
         </div>
 
@@ -88,10 +96,46 @@
         </div>
 
         <!-- Slider -->
-        <div class="row">Slider</div>
+        <div class="swiper article-swiper">
+            <div class="swiper-wrapper article-wrapper">
+                <article class="swiper-slide article">
+                    <i class="fa-solid fa-star fa-2x"></i>
+                    <h1>Facere evenient quae</h1>
+                    <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
+                </article>
+                <article class="swiper-slide article">
+                    <i class="fa-solid fa-star fa-2x"></i>
+                    <h1>Facere evenient quae</h1>
+                    <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
+                </article>
+                <article class="swiper-slide article">
+                    <i class="fa-solid fa-star fa-2x"></i>
+                    <h1>Facere evenient quae</h1>
+                    <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
+                </article>
+                <article class="swiper-slide article">
+                    <i class="fa-solid fa-star fa-2x"></i>
+                    <h1 class="h4">Facere evenient quae</h1>
+                    <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
+                </article>
+                <article class="swiper-slide article">
+                    <i class="fa-solid fa-star fa-2x"></i>
+                    <h1 class="h4">Facere evenient quae</h1>
+                    <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
+                </article>
+                <article class="swiper-slide article">
+                    <i class="fa-solid fa-star fa-2x"></i>
+                    <h1 class="h4">Facere evenient quae</h1>
+                    <p>Distinctio porro totam qi aperiam laboriosam consequatur.</p>
+                </article>
+
+            </div>
+        </div>
+
     </div>
 
     <!-- Javascript Local Libraries -->
+    <script src="./javascript/libs/fontsawesome.js"></script>
     <script src="./javascript/libs/bootstrap.bundle.min.js"></script>
     <script src="./javascript/libs/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
