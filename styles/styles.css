@@ -174,18 +174,12 @@ body {
 
 @media only screen AND (max-width: 570px) {
 
-    .controller {
-        position: absolute;
-        top: 100px;
-        opacity: 1 !important;
-    }
-
-    .controller .swiper-button {
-        display: none;
-    }
-
     .mouse-scroll {
         display: none;
+    }
+
+    .swiper-slide .image {
+        height: 200px;
     }
 
     .banner-image-container {
