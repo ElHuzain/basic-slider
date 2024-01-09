@@ -239,7 +239,7 @@ h1 {
     font-size: calc(1.375rem + 1.5vw)
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
 
     .h1,
     h1 {
@@ -252,7 +252,7 @@ h2 {
     font-size: calc(1.325rem + .9vw)
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
 
     .h2,
     h2 {
@@ -265,7 +265,7 @@ h3 {
     font-size: calc(1.3rem + .6vw)
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
 
     .h3,
     h3 {
@@ -278,7 +278,7 @@ h4 {
     font-size: calc(1.275rem + .3vw)
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
 
     .h4,
     h4 {
@@ -560,7 +560,7 @@ legend {
     line-height: inherit
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
     legend {
         font-size: 1.5rem
     }
@@ -639,7 +639,7 @@ progress {
     line-height: 1.2
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
     .display-1 {
         font-size: 5rem
     }
@@ -651,7 +651,7 @@ progress {
     line-height: 1.2
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
     .display-2 {
         font-size: 4.5rem
     }
@@ -663,7 +663,7 @@ progress {
     line-height: 1.2
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
     .display-3 {
         font-size: 4rem
     }
@@ -675,7 +675,7 @@ progress {
     line-height: 1.2
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
     .display-4 {
         font-size: 3.5rem
     }
@@ -687,7 +687,7 @@ progress {
     line-height: 1.2
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
     .display-5 {
         font-size: 3rem
     }
@@ -699,7 +699,7 @@ progress {
     line-height: 1.2
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
     .display-6 {
         font-size: 2.5rem
     }
@@ -819,7 +819,7 @@ progress {
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width: 1264px) {
 
     .container,
     .container-lg,
@@ -847,7 +847,7 @@ progress {
     --bs-breakpoint-sm: 576px;
     --bs-breakpoint-md: 768px;
     --bs-breakpoint-lg: 992px;
-    --bs-breakpoint-xl: 1200px;
+    --bs-breakpoint-xl: 1264px;
     --bs-breakpoint-xxl: 1400px
 }
 
@@ -1720,7 +1720,7 @@ progress {
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
     .col-xl {
         flex: 1 0 0%
     }
@@ -4019,7 +4019,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
     .dropdown-menu-xl-start {
         --bs-position: start
     }
@@ -4803,7 +4803,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
     .navbar-expand-xl {
         flex-wrap: nowrap;
         justify-content: flex-start
@@ -5891,7 +5891,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
     .list-group-horizontal-xl {
         flex-direction: row
     }
@@ -6372,7 +6372,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
     .modal-xl {
         --bs-modal-width: 1140px
     }
@@ -7486,7 +7486,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
     .offcanvas-xl {
         --bs-offcanvas-height: auto;
         --bs-offcanvas-border-width: 0;
@@ -8069,7 +8069,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
     .sticky-xl-top {
         position: -webkit-sticky;
         position: sticky;
@@ -12359,7 +12359,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
     .float-xl-start {
         float: left !important
     }
@@ -13829,7 +13829,7 @@ fieldset:disabled .btn {
     }
 }
 
-@media (min-width:1200px) {
+@media (min-width:1264px) {
     .fs-1 {
         font-size: 2.5rem !important
     }

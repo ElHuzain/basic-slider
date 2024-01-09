@@ -2,17 +2,103 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="./styles/libs/bootstrap.min.css" rel="stylesheet">
-    <title>Bootstrap demo</title>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./styles/libs/bootstrap.min.css" rel="stylesheet" />
+    <link href="./styles/styles.css" rel="stylesheet" />
+    <link href="./styles/libs/swiper-bundle.min.css" rel="stylesheet" />
+
+    <title>5D Task, Bootstrap ver</title>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Hello, world!</h1>
+    <div class="container-lg">
+
+
+        <!-- Banner, image, controller -->
+        <div class="row swiper p-0 main-swiper">
+
+            <!-- Banner, Image -->
+            <div class="col-12 swiper-wrapper banner-image-container p-0">
+
+                <!-- Swiper Slides (Repeated) -->
+                <div class="swiper-slide row flex-lg-row flex-column-reverse">
+                    <div class="banner col-12 col-sm-9 col-lg p-lg-0">
+                        <h1 class="fw-bold mt-4 mt-lg-0 text-muted mb-0">Real Estate Knowledge Bank</h1>
+                        <p class="h5-lg mt-2 mb-0 mb-sm-5 col-12 col-lg-10">Want to press your broker exam in first
+                            attempt? Want to
+                            stand out
+                            from the croud? Then download this valuable resource which contains Q & A's, real estate
+                            concepts, propery management, best practices and many more...</p>
+                        <button class="btn">Register to Download</button>
+                    </div>
+                    <div class="image rounded col-12 col-lg-6 p-0">
+                        <img class="rounded" src="./assets/image-1.jpeg" />
+                    </div>
+                </div>
+                <div class="swiper-slide row flex-lg-row flex-column-reverse">
+                    <div class="banner col-12 col-sm-9 col-lg p-lg-0">
+                        <h1 class="fw-bold mt-4 mt-lg-0 text-muted mb-0">Noqodi Payment Support</h1>
+                        <p class="h5-lg mt-2 mb-0 mb-sm-5 col-12 col-lg-10">For Noqodi Support, please complete the form
+                            available at the
+                            link
+                            below. </p>
+                        <button class="btn">Application Form</button>
+                    </div>
+                    <div class="image rounded col-12 col-lg-6 p-0">
+                        <img class="rounded" src="./assets/image-2.jpg" />
+                    </div>
+                </div>
+                <div class="swiper-slide row flex-lg-row flex-column-reverse">
+                    <div class="banner col-12 col-sm-9 col-lg p-lg-0">
+                        <h1 class="fw-bold mt-4 mt-lg-0 text-muted mb-0">Login via UAE PASS Only
+                        </h1>
+                        <p class="h5-lg mt-2 mb-0 mb-sm-5 col-12 col-lg-10">Starting 1st January 2024, you will need to
+                            login to the
+                            following
+                            systems via UAE PASS only Oqood, Registration Trustee, Property Trustee, Ejari, Trakheesi
+                            and Mollak.</p>
+                        <button class="btn">How to Register?</button>
+                    </div>
+                    <div class="image rounded col-12 col-lg-6 p-0">
+                        <img class="rounded" src="./assets/image-3.jpg" />
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Swiper Controller -->
+            <div class="col-12 p-0 controller mt-4">
+                <button class="swiper-button-prev swiper-button"></button>
+                <div>Don Eladio</div>
+                <div class="swiper-pagination"></div>
+                <button class="swiper-button-next swiper-button"></button>
+            </div>
+
+        </div>
+
+        <!-- Mouse scroll -->
+        <dotlottie-player src="https://lottie.host/5b2c7033-52ae-4c63-8156-253f71106754/K9wzJmcYrF.json"
+            background="transparent" speed="1" class="mouse-scroll" loop autoplay></dotlottie-player>
+
+        <!-- Help input -->
+        <div class="helper-input">
+            <input placeholder="How can we help you?" class="rounded p-3 border-0" />
+        </div>
+
+        <!-- Slider -->
+        <div class="row">Slider</div>
     </div>
-    <script src="/javascript/libs/bootstrap.bundle.min.js"></script>
+
+    <!-- Javascript Local Libraries -->
+    <script src="./javascript/libs/bootstrap.bundle.min.js"></script>
+    <script src="./javascript/libs/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <!-- <script src="./javascript/libs/dotlottie-player.mjs" type="module"></script> -->
+
+    <!-- Initializing my swipers and other JS stuff. -->
+    <script src="./javascript/script.js"></script>
 </body>
 
 </html>
