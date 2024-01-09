@@ -55,6 +55,6 @@ const resetAnimation = () => {
 lottieAnimation.addEventListener('frame', (e) => {
   const currentFrame = e.detail.frame;
 
-  if (currentFrame === 65) resetAnimation(); 
+  if (currentFrame > 65) resetAnimation(); 
 
 });
