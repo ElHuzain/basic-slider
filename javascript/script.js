@@ -15,13 +15,12 @@ var swiper = new Swiper(".main-swiper", {
 
 
 var articleSwiper = new Swiper(".article-swiper", {
-  slidesPerView:  window.innerWidth > 600 ? 4 : 1,
+  slidesPerView: 'auto',
   spaceBetween: 8,
+  freeMode: true,
 });
 
-window.addEventListener('resize', () => {
-  articleSwiper.passedParams.slidesPerView = window.innerWidth > 600 ? 4 : 1;
-})
+
 
 
 let currentData = 0;
