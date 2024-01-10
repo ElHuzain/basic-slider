@@ -166,6 +166,12 @@ body {
 
 }
 
+@media only screen AND (max-width: 750px) {
+    .swiper-button {
+        display: none !important;
+    }
+}
+
 @media only screen AND (max-width: 570px) {
 
     .mouse-scroll {
@@ -181,11 +187,6 @@ body {
         width: fit-content;
         padding: 0 !important;
         width: fit-content;
-    }
-
-
-    .swiper-button {
-        display: none !important;
     }
 
     .lottie-container {
