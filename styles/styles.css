@@ -16,6 +16,15 @@
     margin: 0 -12px !important;
 }
 
+/* Overridign swiper pagination bullets */
+.swiper-pagination-bullet, .swiper-pagination-bullet-active {
+    background-color: black !important;
+    opacity: 0.3 !important;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1 !important;
+}
+
 .swiper-slide button {
     background-color: white !important;
     width: fit-content;
