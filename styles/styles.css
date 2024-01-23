@@ -78,6 +78,10 @@ body {
     height: 240px !important;
 }
 
+.main-swiper .swiper-slide-next {
+    opacity: 0 !important;
+}
+
 .article h1 {
     color: #575757;
     font-weight: bold;
