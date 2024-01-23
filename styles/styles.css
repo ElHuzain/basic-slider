@@ -17,10 +17,12 @@
 }
 
 /* Overridign swiper pagination bullets */
-.swiper-pagination-bullet, .swiper-pagination-bullet-active {
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
     background-color: black !important;
     opacity: 0.3 !important;
 }
+
 .swiper-pagination-bullet-active {
     opacity: 1 !important;
 }
@@ -175,6 +177,10 @@ body {
 
     .banner-image-container {
         height: 300px;
+    }
+
+    .no-rounding-responsive {
+        border-radius: 0 !important;
     }
 
 }
