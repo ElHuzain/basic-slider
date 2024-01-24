@@ -28,6 +28,18 @@ const PauseBtn = document.getElementById('pause-play');
 // Lottie animation
 const lottieAnimation = document.getElementById('lottie-animatino');
 
+// Clickable arrows
+const ClickableArrows = document.getElementsByClassName('clikable-arrow');
+
+// Reversing arrows in case of RTL layout
+const isRTL = document.getElementsByTagName('html')[0].attributes[0].value === 'rtl'
+
+if(isRTL) {
+  for(let i = 0; i < ClickableArrows.length; i++) {
+    ClickableArrows[i].style.transform = 'rotate(180deg)'
+  }
+}
+
 // Pause / play logic
 let pause = false;
 
